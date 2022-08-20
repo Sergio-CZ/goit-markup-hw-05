@@ -69,6 +69,7 @@ img {
 }
 
 .container {
+  display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1200px;
@@ -109,7 +110,6 @@ img {
 }
 .header-list {
   display: flex;
-  width: 294px;
   margin-right: 305px;
   justify-content: flex-start;
   gap: 50px;
@@ -142,15 +142,26 @@ img {
 }
 .header-contact-list {
   display: flex;
-  gap: 30px;
   justify-content: flex-end;
 }
+
+.header-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header-contact-link {
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+
   color: var(--text-color);
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
+
 .header-mail-contact {
   display: flex;
   margin-right: 10px;
@@ -159,26 +170,38 @@ img {
   display: flex;
   margin-right: 10px;
 }
+
+/* 
 .header-contact-link:hover,
 .header-contact-link:focus {
   color: var(--color-blue);
-}
-.mail-address-new .header-mail-contact:hover,
-.mail-address-new .header-mail-contact:hover {
+} */
+/* }
+.header-mail-contact .header-contact-link:hover,
+.header-mail-contact .header-contact-link:hover {
+  fill: var(--color-blue);
+  color: var(--color-blue);
+} */
+
+.header-contact-item .header-contact-link:hover,
+.header-contact-item .header-mail-contact:focus {
+  color: var(--color-blue);
   fill: var(--color-blue);
 }
-.mail-address-new {
-  display: flex;
-  align-items: center;
-}
-.header-contact-item {
-  display: flex;
-  align-items: center;
-}
+
+/* }
+.mail-address-new::hover,
+.mail-address-new:focus {
+  background-color: var(--color-blue);
+} */
+
+/* 
+. mail-address-new */
+
 .tel-address-new {
   display: flex;
-  margin-right: 10px;
 }
+
 .tel-address-new .header-tel-contact:hover,
 .tel-address-new .header-tel-contact:hover {
   fill: var(--color-blue);
@@ -189,8 +212,12 @@ img {
   max-width: 1600px;
   height: 600px;
   background-color: #c4c4c4;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/img14.jpg');
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/img14.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -245,6 +272,7 @@ img {
   width: 1600px;
 }
 .hero-ii-container {
+  justify-content: center;
   display: flex;
   padding-top: 94px;
   gap: 30px;
@@ -619,10 +647,10 @@ footer {
 }
 .hero-ii-port-container {
   display: flex;
+  width: 1200px;
   flex-wrap: wrap;
   padding-top: 50px;
   margin: 0 auto;
-  width: 1200px;
 }
 .hero-ii-port-item {
   margin-right: 30px;

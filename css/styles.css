@@ -170,25 +170,28 @@ img {
   display: flex;
   margin-right: 10px;
 }
-
 .header-contact-item .header-contact-link:hover,
 .header-contact-item .header-mail-contact:focus {
   color: var(--color-blue);
   fill: var(--color-blue);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tel-address-new {
-  display: flex;
+.header-contact-port-item .header-mail-port-contact:hover,
+.header-contact-port-item .header-mail-port-contact:focus {
+  color: var(--text-color);
+  fill: var(--text-color);
+}
+.header-mail-port-contact {
+  fill: var(--text-color);
+  margin-right: 10px;
 }
 
-.tel-address-new .header-tel-contact:hover,
-.tel-address-new .header-tel-contact:hover {
-  fill: var(--color-blue);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.header-tel-port-contact {
+  fill: var(--text-color);
+  margin-right: 10px;
 }
-.overlay {
+
+.overlay1 {
   margin-left: 0;
   margin-right: auto;
   max-width: 1600px;
@@ -200,22 +203,24 @@ img {
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/img14.jpg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
+
 .hero {
+  padding-top: 0;
   height: 600px;
   text-align: center;
   background-color: var(--color-footer);
-  padding: 94px 0 94px;
   margin: 0 auto 0;
   width: 1600px;
 }
 .hero-container {
   display: block;
+  align-items: center;
 }
 .hero-text {
-  padding-top: 106px;
+  padding-top: 200px;
   margin: 0 auto 30px;
   width: 696px;
   text-align: center;
@@ -246,15 +251,15 @@ img {
 .button:hover,
 .button:focus {
   background-color: var(--color-button-blue);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-ii {
-  padding-top: 94px;
+  padding-top: 0;
   margin: 0 auto 0;
   text-align: center;
   width: 1600px;
 }
 .hero-ii-container {
+  padding-top: 0;
   justify-content: center;
   display: flex;
   padding-top: 94px;
@@ -275,16 +280,6 @@ img {
   background-color: var(--color-button-grey);
   background-size: contain;
   margin-bottom: 30px;
-}
-.social-item-twitter {
-  display: block;
-  padding: 12px 12px;
-  width: 44px;
-  height: 44px;
-  background-position: center;
-  outline: 1px solid red;
-  background-size: contain;
-  gap: 10px;
 }
 .social-list-container {
   display: flex;
@@ -312,11 +307,89 @@ img {
   text-align: center;
 }
 .hero-iii-item {
+  display: block;
   margin: 0 auto 0;
   text-align: center;
 }
+.thumb {
+  position: relative;
+}
+
+.hero-iii-layer::before {
+  display: flex;
+  content: "Десктопні додатки";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 370px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+
+.hero-iii-mobil::before {
+  display: flex;
+  content: "Мобільні додатки";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 370px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+
+.hero-iii-design::before {
+  display: flex;
+  content: "Дизайнерські рішення";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 370px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+}
+
+/* transform: translate(-50%, -50%); */
+
+/* 
+.overlay2 {
+  margin-left: 0;
+  margin-right: auto;
+  max-width: 370px;
+  height: 70px;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/box1.jpg");
+  background-size: contain;
+  background-position: center;
+} */
+
 .hero-iii-title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   color: var(--title-color);
   font-weight: 700;
   font-size: 36px;
@@ -328,10 +401,10 @@ img {
 }
 .container.header-container {
   display: flex;
+  margin-top: 50px;
   padding: 0 0;
 }
 .hero-iv-team {
-  padding: 94px 0 94px;
   margin: 0 auto 0;
   text-align: center;
   width: 1600px;
@@ -365,7 +438,6 @@ img {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 30px;
 }
 .soc {
   fill: #afb1b8;
@@ -380,38 +452,22 @@ img {
 .social-link:hover,
 .social-link:focus {
   background-color: var(--color-blue);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover .soc,
 .social-link:focus .soc {
   fill: var(--color-white);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-link {
-  display: flex;
-  padding: 16px 32px 16px;
-  width: 106px;
-  height: 60px;
-  background-position: center;
-  background-size: cover;
-  fill: #afb1b8;
-  background-color: #ffffff;
-}
 .clients {
   display: flex;
-  padding: 12px 12px;
-  width: 106px;
-  height: 60px;
+  padding: 16px 16px;
   background-position: center;
   background-size: contain;
   fill: #afb1b8;
-  border: 2 px solid var(--color-black);
 }
 .clients:hover,
 .clients:focus {
   fill: var(--color-blue);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-clients {
   display: flex;
@@ -430,6 +486,11 @@ img {
 .social-link {
   color: var(--color-blue);
   border-radius: 50%;
+  margin-bottom: 30px;
+}
+.clients-link {
+  fill: red;
+  background-color: var(--color-blue);
 }
 .hero-iv-text {
   margin-bottom: 16px;
@@ -450,7 +511,6 @@ img {
   justify-content: center;
 }
 footer {
-  width: 1600px;
   margin: 0 auto 0;
   text-align: left;
   background-color: var(--color-footer);
@@ -476,6 +536,11 @@ footer {
 .footer-item {
   display: block;
 }
+
+.footer-container .footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer-map {
   display: block;
   text-align: left;
@@ -485,23 +550,24 @@ footer {
   line-height: 1.71;
   font-style: normal;
 }
-.footer-map:not(:last-child) {
-  margin-top: 9px;
-}
+
 .footer-map:hover,
 .footer-map:focus {
   color: var(--color-blue);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.last-footer {
-  display: block;
-  padding: 72px 0 100px;
-  margin-left: 70px;
 }
 .main-footer {
   display: flex;
-  padding-left: 215px;
+  align-items: flex-start;
+  justify-content: left;
 }
+
+.last-footer {
+  display: block;
+  padding-top: 72px;
+  padding-bottom: 100px;
+  margin-left: 70px;
+}
+
 .footer-link {
   display: block;
   text-align: left;
@@ -515,10 +581,9 @@ footer {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--color-blue);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-title {
-  text-align: center;
+  text-align: left;
   color: var(--color-white);
   font-weight: 700;
   font-size: 14px;
@@ -539,18 +604,17 @@ footer {
   height: 44px;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-whitesemi);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--color-blue);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-link .footer-soc:hover,
 .footer-social-link .footer-soc:focus {
   fill: var(--color-white);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*  Вторая страница Portfolio */
@@ -584,7 +648,6 @@ footer {
 .hero-blue-btn:hover,
 .hero-blue-btn:focus {
   background-color: var(--color-button-blue);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-port-item {
   color: var(--title-color);
@@ -612,13 +675,11 @@ footer {
   border: none;
   border-radius: 4px;
 }
-/* .hero-port-btn:hover,
+.hero-port-btn:hover,
 .hero-port-btn:focus {
   background-color: var(--color-button-blue);
   color: var(--color-white);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-} */
+}
 .hero-ii-port {
   padding: 0 0 94px;
   margin: 0 auto 0;
@@ -647,9 +708,7 @@ footer {
 .hero-ii-port-item:hover,
 .hero-ii-port-item:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .hero-ii-border {
   padding-top: 20px;
   padding-left: 24px;

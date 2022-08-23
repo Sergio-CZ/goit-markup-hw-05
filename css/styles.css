@@ -81,16 +81,22 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.header {
-  padding: 25px 0;
+
+.line-border {
+  padding: 32px 0;
   border-bottom: 1px solid #ececec;
-  width: 1600px;
-  margin: 0 auto 0;
+  margin: 0 auto;
 }
-/* Первая страница Студия */
+
 .header-container {
   display: flex;
+  /* margin-bottom: 32px;
+  margin-top: 32px; */
+  width: 100%;
 }
+
+/* Первая страница Студия */
+
 .header-logo {
   margin-right: 93px;
   color: var(--color-black);
@@ -160,7 +166,6 @@ left: 0;
 .header-link-web:hover,
 .header-link-web:focus {
   color: var(--color-blue);
-  transform: color var(--color-blue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-list {
@@ -174,6 +179,18 @@ left: 0;
   justify-content: space-between;
 }
 
+/* 
+.header-mail-contact {
+  display: flex;
+  margin-right: 10px;
+  fill: var(--text-color);
+}
+.header-tel-contact {
+  display: flex;
+  margin-right: 10px;
+  fill: var(--text-color);
+}  */
+
 .header-contact-link {
   display: flex;
   margin-right: 30px;
@@ -186,19 +203,32 @@ left: 0;
 }
 
 .header-mail-contact {
-  display: flex;
   margin-right: 10px;
+  fill: var(--text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .header-tel-contact {
-  display: flex;
   margin-right: 10px;
+  fill: var(--text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-contact-item .header-contact-link:hover,
-.header-contact-item .header-mail-contact:focus {
+
+.header-contact-link:hover,
+.header-contact-link:focus {
   color: var(--color-blue);
-  fill: var(--color-blue);
-  transform: color var(--color-blue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.header-contact-link:hover .header-mail-contact,
+.header-contact-link:focus .header-mail-contact {
+  fill: var(--color-blue);
+}
+
+.header-contact-link:hover .header-tel-contact,
+.header-contact-link:focus .header-tel-contact {
+  fill: var(--color-blue);
+}
+
 /* 
 .header-contact-port-item .header-mail-port-contact:hover,
 .header-contact-port-item .header-mail-port-contact:focus {
@@ -279,8 +309,6 @@ left: 0;
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--color-button-blue);
-  transform: background-color var(--color-button-blue) 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-ii {
   padding-top: 0;
@@ -300,8 +328,8 @@ left: 0;
   padding-bottom: 0;
   gap: 30px;
   width: 270px;
-  transform: translate();
 }
+
 .equipment {
   display: block;
   padding: 25px 100px 25px;
@@ -373,11 +401,18 @@ left: 0;
 }
 .container.header-container {
   display: flex;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding: 0 0;
 }
+
+.container-team {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 60px; */
+}
+
 .hero-iv-team {
-  margin: 0 auto 0;
+  margin: 0 auto;
   text-align: center;
   width: 1600px;
   background-color: var(--color-button-grey);
@@ -430,14 +465,11 @@ left: 0;
 .social-link:hover,
 .social-link:focus {
   background-color: var(--color-blue);
-  transform: background-color var(--color-blue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 
 .social-link:hover .soc,
 .social-link:focus .soc {
   fill: var(--color-white);
-  transform: fill var(--color-white) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients {
@@ -447,23 +479,23 @@ left: 0;
   background-size: contain;
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 .clients:hover,
 .clients:focus {
   fill: var(--color-blue);
-  transform: fill var(--color-blue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-clients {
-  display: flex;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  border: 6px solid #0b2275;
+  border-radius: 6px;
+  transition: border 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.main-clients:hover {
-  border: 1px solid var(--color-blue);  
-  transform: border var(--color-blue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+.main-clients:hover,
+.main-clients:focus {
+  border: var(--color-red);
 }
+
 .clients-list {
   display: flex;
   justify-content: center;
@@ -534,7 +566,6 @@ footer {
 .footer-map:hover,
 .footer-map:focus {
   color: var(--color-blue);
-  transform: color var(--color-blue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-footer {
   display: flex;
@@ -563,9 +594,9 @@ footer {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--color-blue);
-  transform: color var(--color-blue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-title {
+  margin-bottom: 20px;
   text-align: left;
   color: var(--color-white);
   font-weight: 700;
@@ -578,10 +609,17 @@ footer {
   justify-content: center;
   gap: 10px;
 }
+
 .footer-soc {
   fill: var(--color-white);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.footer-social-link:hover .footer-soc,
+.footer-social-link:focus .footer-soc {
+  fill: var(--color-white);
+}
+
 .footer-social-link {
   display: flex;
   width: 44px;
@@ -593,23 +631,17 @@ footer {
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .footer-social-link:hover,
 .footer-social-link:focus {
   background-color: var(--color-blue);
-  transform: background-color var(--color-blue) 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-social-link .footer-soc:hover,
-.footer-social-link .footer-soc:focus {
-  fill: var(--color-white);
-  transform: fill var(--color-blue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*  Вторая страница Portfolio */
+/*  Друга сторінка */
 
 .hero-port-section {
-  padding: 94px 0 0;
-  margin: 0 auto 0;
+  padding: 0;
+  margin: 0 auto;
   text-align: center;
   width: 1600px;
 }
@@ -632,14 +664,13 @@ footer {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   border: none;
-  transition: background-color var(--color-button-blue) 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-blue-btn:hover,
 .hero-blue-btn:focus {
   background-color: var(--color-button-blue);
-  transform: background-color var(--color-button-blue) 250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
+  color: (--color-white);
 }
 .hero-port-item {
   color: var(--title-color);
@@ -666,20 +697,17 @@ footer {
   letter-spacing: 0.03em;
   border: none;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-port-btn:hover,
 .hero-port-btn:focus {
   background-color: var(--color-button-blue);
   color: var(--color-white);
-  transform: background-color var(--color-button-blue) 250ms
-    cubic-bezier(0.4, 0, 0.2, 1), color: var(--color-white)250ms
-    cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-ii-port {
-  padding: 0 0 94px;
-  margin: 0 auto 0;
+  padding: 0;
+  margin: 0 auto;
   text-align: center;
   width: 1600px;
 }
@@ -695,16 +723,20 @@ footer {
   margin-bottom: 30px;
   width: 370px;
   text-align: left;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.hero-ii-port-item:hover,
+.hero-ii-port-item:focus {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
 .hero-ii-port-item:nth-child(3n) {
   margin-right: 0;
 }
 .hero-ii-port-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
-}
-.hero-ii-port-item:hover,
-.hero-ii-port-item:focus {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .thumb-port {
@@ -728,12 +760,11 @@ footer {
   font-size: 18px;
   line-height: 1.55;
   transform: translateY(100%);
-  /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-ii-port-item:hover .hero-ii-port-move {
   transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .thumb {
@@ -783,14 +814,14 @@ footer {
 .backdrop {
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  opacity:1;
+  opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-   visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .modal {
   width: 500px;
@@ -802,15 +833,14 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
 
 .backdrop.is-hiden .modal {
-  transform: translate(-50%,-50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .is-hidden {
-opacity:0;
-visibility: hidden;
-pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
-  

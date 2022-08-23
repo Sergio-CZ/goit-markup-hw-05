@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      hero-iv-name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta hero-iv-name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Головна</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,47 +17,29 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-
   <body>
     <!--Шапка  сторінки-->
-
-    <header>
-      <section class="section header">
-        <div class="container header-container">
+    <header class="line-border">
+             <div class="container header-container">
           <a class="header-logo" href="index.html" title="Наш Логотип"
             ><span class="header-logo-web">Web</span>Studio</a
           >
           <ul class="header-list">
             <li class="header-item">
-              <a class="header-link-web" href="./index.html" title="Наша Студія"
-                >Студія</a
-              >
+              <a class="header-link" href="./index.html" title="Наша Студія">Студія</a>
             </li>
             <li class="header-item">
-              <a
-                class="header-link"
-                href="./portfolio.html"
-                title="Наші проекти"
-                >Портфоліо</a
-              >
+              <a class="header-link-web" href="./portfolio.html" title="Наші проекти">Портфоліо</a>
             </li>
             <li class="header-item">
-              <a
-                class="header-link-web"
-                href="./index.html"
-                title="Наші контакти"
-                >Контакти</a
-              >
+              <a class="header-link-web" href="./index.html" title="Наші контакти">Контакти</a>
             </li>
           </ul>
           <ul class="header-contact-list">
             <li class="header-contact-item">
               <a class="header-contact-link" href="mailto:info@devstudio.com">
                 <svg class="header-mail-contact" width="16" height="12">
-                  <use
-                    href="./images/symbol-defs.svg#icon-envelope-hover-1"
-                  ></use>
-                  ;
+                  <use href="./images/symbol-defs.svg#icon-envelope-hover-1"></use>
                 </svg>
                 info@devstudio.com
               </a>
@@ -68,8 +47,7 @@
             <li class="header-contact-item">
               <a class="header-contact-link" href="tel:+380961111111">
                 <svg class="header-tel-contact" width="10" height="16">
-                  <use href="./images/symbol-defs.svg#icon-smartphone1-1"></use>
-                  ;</svg
+                  <use href="./images/symbol-defs.svg#icon-smartphone1-1"></use></svg
                 >+38 096 111 11 11</a
               >
             </li>
@@ -223,7 +201,7 @@
           </ul>
         </div>
         <div class="last-footer">
-          <h3 class="footer-title">приєднуйтесь</h3>          
+          <h3 class="footer-title">приєднуйтесь</h3>
           <ul class="footer-social-list">
             <li>
               <a href="#" class="footer-social-link">
@@ -235,21 +213,21 @@
             <li>
               <a href="#" class="footer-social-link">
                 <svg class="footer-soc" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-twitter-2"></use>                  
+                  <use href="./images/symbol-defs.svg#icon-twitter-2"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" class="footer-social-link">
                 <svg class="footer-soc" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-facebook-1"></use>                  
+                  <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#" class="footer-social-link">
                 <svg class="footer-soc" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>                  
+                  <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
                 </svg>
               </a>
             </li>
@@ -257,5 +235,11 @@
         </div>
       </div>
     </footer>
-</body>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="button-close" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+  </body>
 </html>

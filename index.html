@@ -26,7 +26,7 @@
           >
           <ul class="header-list">
             <li class="header-item">
-              <a class="header-link" href="./index.html" title="Наша Студія">Студія</a>
+              <a class="header-link-web current" href="./index.html" title="Наша Студія">Студія</a>
             </li>
             <li class="header-item">
               <a class="header-link-web" href="./portfolio.html" title="Наші проекти">Портфоліо</a>
@@ -225,7 +225,7 @@
             </ul>
           </li>
           <li class="hero-iv-item">
-            <img src="./images/img3.jpg" alt="Портрет Миколая" width="270" />
+            <img src="./images/img3.jpg" alt="Портрет Миколи" width="270" />
             <h3 class="hero-iv-name">Микола Тарасов</h3>
             <p class="hero-iv-text">Marketing</p>
             <ul class="social-list">
@@ -346,37 +346,28 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer-studio">
       <div class="container main-footer">
         <div class="footer-container">
           <a class="footer-text" href="./index.html" title="Наш Логотип"
             ><span class="header-logo-web">Web</span>Studio</a
           >
-          <ul>
+          <ul class="footer-address">
             <li class="footer-item">
-              <a
-                class="footer-map"
-                href="https://google.maps/"
-                rel="noopener noreferrer"
-              >
-                г. Київ, пр-т Лесі Українки, 26</a
+              <a class="footer-map" href="https://google.maps/" rel="noopener noreferrer">
+                м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
             <li class="footer-item">
-              <a class="footer-link" href="mailto:info@example.com"
-                >info@example.com</a
-              >
+              <a class="footer-link" href="mailto:info@example.com">info@example.com</a>
             </li>
             <li class="footer-item">
-              <a class="footer-link" href="tel:+380991111111"
-                >+38 099 111 11 11</a
-              >
+              <a class="footer-link" href="tel:+380991111111">+38 099 111 11 11</a>
             </li>
           </ul>
         </div>
         <div class="last-footer">
           <h3 class="footer-title">приєднуйтесь</h3>
-
           <ul class="footer-social-list">
             <li>
               <a href="#" class="footer-social-link">
@@ -412,7 +403,11 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="button-close" data-modal-close>X</button>
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="icon-modul" width="18" height="18"> 
+            <use href="./images/symbol-defs.svg#icon-close-black-18dp-2-1"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>

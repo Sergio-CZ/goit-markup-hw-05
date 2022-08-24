@@ -26,10 +26,10 @@
           >
           <ul class="header-list">
             <li class="header-item">
-              <a class="header-link" href="./index.html" title="Наша Студія">Студія</a>
+              <a class="header-link-web" href="./index.html" title="Наша Студія">Студія</a>
             </li>
             <li class="header-item">
-              <a class="header-link-web" href="./portfolio.html" title="Наші проекти">Портфоліо</a>
+              <a class="header-link-web current" href="./portfolio.html" title="Наші проекти">Портфоліо</a>
             </li>
             <li class="header-item">
               <a class="header-link-web" href="./index.html" title="Наші контакти">Контакти</a>
@@ -57,9 +57,11 @@
     </header>
   <main>
     <section class="section">
+      
       <h1 class="hero-port visually-hidden">Головна секція</h1>
-      <ul class="container header-container">
-        <li class="hero-port-item"><button type="button" class="hero-blue-btn">Усі</button></li>
+    <div class="container">
+      <ul class="header-container-port">
+        <li class="hero-port-item"><button type="button" class="hero-port-btn">Усі</button></li>
         <li class="hero-port-item"><button type="button" class="hero-port-btn">Веб-сайти</button></li>
         <li class="hero-port-item"><button type="button" class="hero-port-btn">Додатки</button></li>
         <li class="hero-port-item"><button type="button" class="hero-port-btn">Дизайн</button></li>
@@ -180,13 +182,13 @@
       </div>
     </section>
   </main>
-   <footer>
+   <footer class="footer-studio">
       <div class="container main-footer">
         <div class="footer-container">
           <a class="footer-text" href="./index.html" title="Наш Логотип"
             ><span class="header-logo-web">Web</span>Studio</a
           >
-          <ul>
+          <ul class="footer-address">
             <li class="footer-item">
               <a class="footer-map" href="https://google.maps/" rel="noopener noreferrer">
                 г. Київ, пр-т Лесі Українки, 26</a

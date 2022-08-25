@@ -797,17 +797,6 @@ footer {
   pointer-events: none;
 }
 
-/* .modal-close {
-  display: flex;
-  position: relative;
-  
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  fill: rgba(0, 0, 0, 0.1);
-  background-color: transparent;
-} */
-
 .modal-close {
   display: flex;
   position: absolute;
@@ -828,11 +817,9 @@ footer {
   display: flex;
   position: relative;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  
+  }
 
-
-}
-.icon-modul {   
+  .icon-modul {   
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
